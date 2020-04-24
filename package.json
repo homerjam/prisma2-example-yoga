@@ -1,0 +1,55 @@
+{
+  "name": "prisma2-example-yoga",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "node dist",
+    "clean": "rm -rf dist",
+    "build": "npm -s run clean && npm -s run generate && tsc",
+    "generate": "npm -s run generate:prisma && npm -s run generate:nexus",
+    "generate:prisma": "prisma generate",
+    "generate:nexus": "ts-node --transpile-only src/schema",
+    "postinstall": "npm -s run generate",
+    "dev": "ts-node-dev --no-notify --respawn --transpileOnly src",
+    "studio": "prisma studio --experimental",
+    "migrate:save": "prisma migrate save --experimental",
+    "migrate:up": "prisma migrate up --experimental --verbose"
+  },
+  "dependencies": {
+    "@nexus/schema": "^0.13.1",
+    "@now/node": "^1.5.1",
+    "@prisma/client": "^2.0.0-beta.3",
+    "auth0": "^2.24.0",
+    "aws-serverless-express": "^3.3.8",
+    "dotenv": "^8.2.0",
+    "got": "^10.7.0",
+    "graphql": "^14.6.0",
+    "graphql-middleware": "^4.0.2",
+    "graphql-shield": "^7.2.6",
+    "graphql-yoga": "^1.18.3",
+    "jsonwebtoken": "^8.5.1",
+    "jwks-rsa": "^1.8.0",
+    "lodash": "^4.17.15",
+    "nexus": "^0.12.0",
+    "nexus-prisma": "^0.12.0",
+    "pusher": "^3.0.1"
+  },
+  "devDependencies": {
+    "@prisma/cli": "^2.0.0-beta.3",
+    "@types/auth0": "^2.20.3",
+    "@types/aws-lambda": "^8.10.50",
+    "@types/aws-serverless-express": "^3.3.3",
+    "@types/dotenv": "^8.2.0",
+    "@types/got": "^9.6.10",
+    "@types/jsonwebtoken": "^8.3.9",
+    "@types/lodash": "^4.14.150",
+    "@types/node": "^13.13.2",
+    "@types/ws": "^7.2.4",
+    "prettier": "^2.0.5",
+    "ts-node": "^8.9.0",
+    "ts-node-dev": "^1.0.0-pre.44",
+    "typescript": "^3.8.3"
+  },
+  "resolutions": {
+    "graphql": "14.6.0"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "schema": "http://localhost:4000",
+  "extensions": {
+    "endpoints": {
+      "dev": {
+        "url": "http://localhost:4000",
+        "headers": {
+          "authorization": "Bearer xxx",
+          "accept": "application/json",
+          "content-type": "application/json"
+        }
+      }
+    }
+  }
+}
