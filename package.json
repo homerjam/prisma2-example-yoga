@@ -18,7 +18,7 @@
     "@nexus/schema": "^0.13.1",
     "@now/node": "^1.5.1",
     "@prisma/client": "^2.0.0-beta.3",
-    "auth0": "^2.24.0",
+    "auth0": "^2.27.1",
     "aws-serverless-express": "^3.3.8",
     "dotenv": "^8.2.0",
     "got": "^10.7.0",
